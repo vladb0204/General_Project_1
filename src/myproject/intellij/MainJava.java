@@ -43,7 +43,9 @@ public class MainJava {
         return BigInteger.valueOf(readLong());
     }
 
-    private short readShort() { return Short.parseShort(Objects.requireNonNull(readString())); }
+    private short readShort() {
+        return Short.parseShort(Objects.requireNonNull(readString()));
+    }
 
     private String readString() {
         while (!tok.hasMoreTokens()) {
