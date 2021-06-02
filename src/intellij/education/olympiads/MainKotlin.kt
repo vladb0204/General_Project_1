@@ -1,4 +1,4 @@
-package intellij.education.olimpiads
+package intellij.education.olympiads
 
 import java.io.*
 import java.lang.*
