@@ -1,4 +1,4 @@
-package myproject.intellij;
+package intellij.education.olimpiads;
 
 import java.lang.*;
 import java.util.*;
@@ -12,11 +12,10 @@ public class MainJava {
     }
 
     private void solve() {
-        int num = readInt();
-        out.printf("You have entered number %d", num);
+        out.println("Hello, world!");
     }
 
-    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
     private long sqrtLong(long x) {
         long root = (long) Math.sqrt(x);
@@ -25,7 +24,7 @@ public class MainJava {
         return root;
     }
 
-    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
     private long readLong() {
         return Long.parseLong(Objects.requireNonNull(readString()));
@@ -39,12 +38,28 @@ public class MainJava {
         return Objects.requireNonNull(readString()).charAt(0);
     }
 
-    private BigInteger readBigInteger() {
-        return BigInteger.valueOf(readLong());
+    private double readDouble() {
+        return Double.parseDouble(Objects.requireNonNull(readString()));
     }
 
     private short readShort() {
         return Short.parseShort(Objects.requireNonNull(readString()));
+    }
+
+    private BigInteger readBigInteger() {
+        return BigInteger.valueOf(readLong());
+    }
+
+    private int[] readIntArray(int size) {
+        int[] result = new int[size];
+        for (int index = 0; index < size; index++) { result[index] = readInt(); }
+        return result;
+    }
+
+    private long[] readLongArray(int size) {
+        long[] result = new long[size];
+        for (int index = 0; index < size; index++) { result[index] = readLong(); }
+        return result;
     }
 
     private String readString() {
@@ -65,7 +80,7 @@ public class MainJava {
         }
     }
 
-    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
     private BufferedReader in;
     private StringTokenizer tok;
@@ -99,12 +114,11 @@ public class MainJava {
         tok = new StringTokenizer("");
     }
 
-    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
     private void run() {
         try {
-            initIO();
-            solve();
+            initIO(); solve();
             out.close();
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,23 +1,20 @@
-package myproject.intellij
+package intellij.education.olimpiads
 
 import java.io.*
+import java.lang.*
 import java.math.*
 import java.util.*
-import java.lang.*
-import java.util.Collections.*
-
-import kotlin.collections.*
 import kotlin.math.sqrt
 
-public fun main(args: Array<String>) {
+
+fun main(args: Array<String>) {
     MainKotlin().run()
 }
 
 private class MainKotlin {
 
     private fun solve() {
-        val num: Int = readInt()
-        out!!.printf("You have entered number $num")
+        out!!.println("Hello world!")
     }
 
     //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -43,12 +40,16 @@ private class MainKotlin {
         return readString()!!.single()
     }
 
-    private fun readBigInteger(): BigInteger {
-        return BigInteger.valueOf(readLong())
-    }
-
     private fun readShort(): Short {
         return readString()!!.toShort()
+    }
+
+    private fun readDouble(): Double {
+        return readString()!!.toDouble()
+    }
+
+    private fun readBigInteger(): BigInteger {
+        return BigInteger.valueOf(readLong())
     }
 
     private fun readIntArray(size: Int): IntArray {
@@ -117,8 +118,7 @@ private class MainKotlin {
 
     fun run() {
         try {
-            initIO()
-            solve()
+            initIO(); solve()
             out!!.close()
         } catch (e: Exception) {
             e.printStackTrace()
